@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Braccio_ros">
+  <link
+    name="boxr">
+    <inertial>
+      <origin
+        xyz="-1.2975E-18 0.052388 5.4873E-16"
+        rpy="0 0 0" />
+      <mass
+        value="13.783" />
+      <inertia
+        ixx="0.1324"
+        ixy="-6.704E-18"
+        ixz="-3.6412E-31"
+        iyy="0.18314"
+        iyz="5.3146E-16"
+        izz="0.1324" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/boxr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.18039 0.18039 0.18039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/boxr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="baser">
+    <inertial>
+      <origin
+        xyz="-2.1721E-05 -0.0052676 0.10516"
+        rpy="0 0 0" />
+      <mass
+        value="8.2222" />
+      <inertia
+        ixx="0.064798"
+        ixy="7.3707E-07"
+        ixz="7.1517E-06"
+        iyy="0.085982"
+        iyz="0.00031541"
+        izz="0.080171" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/baser.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.97647 0.43922 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/baser.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="P1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.137"
+      rpy="0 0 -2.9305" />
+    <parent
+      link="boxr" />
+    <child
+      link="baser" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="shoulderr">
+    <inertial>
+      <origin
+        xyz="1.3258E-15 4.0525E-15 0.17079"
+        rpy="0 0 0" />
+      <mass
+        value="2.5187" />
+      <inertia
+        ixx="0.029253"
+        ixy="-8.6736E-19"
+        ixz="-5.9206E-17"
+        iyy="0.031503"
+        iyz="-6.6986E-17"
+        izz="0.0058438" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/shoulderr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96863 0.43922 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/shoulderr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="P2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.213"
+      rpy="-0.00053701 0 0" />
+    <parent
+      link="baser" />
+    <child
+      link="shoulderr" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="extrar">
+    <inertial>
+      <origin
+        xyz="2.498E-16 1.3372E-15 0.23716"
+        rpy="0 0 0" />
+      <mass
+        value="1.9394" />
+      <inertia
+        ixx="0.034478"
+        ixy="1.7347E-18"
+        ixz="-3.4688E-17"
+        iyy="0.034608"
+        iyz="-7.7302E-17"
+        izz="0.0031081" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/extrar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96863 0.43922 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/extrar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="P3"
+    type="revolute">
+    <origin
+      xyz="0 0 0.32135"
+      rpy="0 -0.024086 -1.5708" />
+    <parent
+      link="shoulderr" />
+    <child
+      link="extrar" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="elbowr">
+    <inertial>
+      <origin
+        xyz="-6.8456E-05 -2.0817E-17 0.16464"
+        rpy="0 0 0" />
+      <mass
+        value="2.5528" />
+      <inertia
+        ixx="0.033301"
+        ixy="-8.6736E-19"
+        ixz="-1.8238E-05"
+        iyy="0.036039"
+        iyz="8.0299E-18"
+        izz="0.0064135" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/elbowr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96863 0.43922 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/elbowr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="P4"
+    type="revolute">
+    <origin
+      xyz="0 0 0.326"
+      rpy="-0.019503 0 0" />
+    <parent
+      link="extrar" />
+    <child
+      link="elbowr" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="pitchr">
+    <inertial>
+      <origin
+        xyz="-4.6282E-15 0.064889 -5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.76987" />
+      <inertia
+        ixx="0.0039598"
+        ixy="-1.6263E-19"
+        ixz="-1.7347E-18"
+        iyy="0.0031235"
+        iyz="2.7274E-18"
+        izz="0.0057352" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/pitchr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96863 0.43922 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/pitchr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="P5"
+    type="revolute">
+    <origin
+      xyz="0 0 0.32136"
+      rpy="1.4477 0 0" />
+    <parent
+      link="elbowr" />
+    <child
+      link="pitchr" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rollr">
+    <inertial>
+      <origin
+        xyz="-0.010056 0.054872 -1.6653E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.50117" />
+      <inertia
+        ixx="0.0016839"
+        ixy="0.00011728"
+        ixz="7.3184E-19"
+        iyy="0.001331"
+        iyz="-1.4021E-17"
+        izz="0.0008487" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/rollr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96863 0.43922 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Braccio_ros/meshes/rollr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="P6"
+    type="revolute">
+    <origin
+      xyz="0 0.13367 0"
+      rpy="0 0.64444 0" />
+    <parent
+      link="pitchr" />
+    <child
+      link="rollr" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
